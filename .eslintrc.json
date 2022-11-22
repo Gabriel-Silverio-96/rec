@@ -44,5 +44,9 @@
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-explicit-any": "off"
     },
-    "ignorePatterns": ["**/src/assets/images/**"]
+    "ignorePatterns": [
+        "**/src/assets/images/**",
+        "**/tailwind.config.js",
+        "**/postcss.config.js"
+    ]
 }
