@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn-main {
+        @apply w-72 h-72 flex items-center justify-center m-auto rounded-full shadow-lg;
+    }
+
+    .btn-recording {
+        @apply bg-red-recording-main shadow-recording;
+    }
+
+    .btn-stop-recording {
+        @apply bg-purple-stop-recording-main shadow-stop-recording;
+    }
+}
