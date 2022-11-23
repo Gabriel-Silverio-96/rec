@@ -1,7 +1,12 @@
+import { useState } from "react";
 import HomeView from "./HomeView";
 
 const Home = () => {
-	return <HomeView />;
+	const [isRecording, setRecording] = useState(false);
+
+	const toggleRecording = () => setRecording(prevState => !prevState);
+
+	return <HomeView {...{ isRecording, toggleRecording }} />;
 };
 
 export default Home;
