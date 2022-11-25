@@ -1,7 +1,8 @@
 import { FaMicrophone } from "react-icons/fa";
 import { RiStopFill } from "react-icons/ri";
+import { IHomeView } from "./types/Home.component";
 
-const HomeView: React.FC<any> = (props) => {
+const HomeView: React.FC<IHomeView> = (props) => {
 	const { isRecording, toggleRecording, audioURL } = props;
 
 	const isRecordingClassName = isRecording ? "btn-main btn-stop-recording" : "btn-main btn-recording";
