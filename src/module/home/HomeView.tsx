@@ -1,10 +1,12 @@
 import { FaMicrophone } from "react-icons/fa";
 import { RiStopFill } from "react-icons/ri";
 
-const HomeView: React.FC<any> = ({ isRecording, toggleRecording }) => {
+const HomeView: React.FC<any> = (props) => {
+	const { isRecording, toggleRecording, audioURL } = props;
+
 	const isRecordingClassName = isRecording ? "btn-main btn-stop-recording" : "btn-main btn-recording";
 	const isRecordingIcon = isRecording ? <RiStopFill color="white" size={90}/> : <FaMicrophone color="white" size={90} />;
-
+	
 	return (
 		<div className="h-75vh flex items-center text-center justify-center flex-col">
 			<button className={isRecordingClassName}
@@ -12,6 +14,7 @@ const HomeView: React.FC<any> = ({ isRecording, toggleRecording }) => {
 			>
 				{isRecordingIcon}				
 			</button>
+			<audio controls src={audioURL} />
 		</div>
 	);
 };
