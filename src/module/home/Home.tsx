@@ -25,6 +25,9 @@ const Home = () => {
 				instanceMediaRecorder.addEventListener("dataavailable",	dataavailableFn);
 				setMediaRecorder(instanceMediaRecorder);
 			} catch (error) {
+				toast.error("Permission to use microphone denied",  {
+					toastId: "permission",
+				});
 				console.error(error);
 			}
 		};
