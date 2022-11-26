@@ -5,12 +5,15 @@ import ReactDOM from "react-dom/client";
 import Home from "./module/home";
 import reportWebVitals from "./reportWebVitals";
 import Layout from "shared/components/Layout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+	document.getElementById("root") as HTMLElement
 );
 root.render(
 	<React.StrictMode>
+		<ToastContainer theme="dark" autoClose={700} />
 		<Layout>
 			<Home />
 		</Layout>
