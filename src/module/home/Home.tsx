@@ -3,7 +3,7 @@ import HomeView from "./HomeView";
 import { toast } from "react-toastify";
 
 const Home = () => {
-	const [microphoneAllowed, setMicrophoneAllowed] = useState(false);
+	const [microphoneAllowed, setMicrophoneAllowed] = useState(true);
 	const [requestMicrophone, setRequestMicrophone] = useState(false);
 
 	const [isRecording, setRecording] = useState(false);
@@ -32,7 +32,7 @@ const Home = () => {
 			} catch (error) {
 				setMicrophoneAllowed(false);
 				toast.error("Permission to use microphone denied",  {
-					toastId: "permission",
+					toastId: "permission-microphone",
 				});
 				console.error(error);
 			}
@@ -49,7 +49,7 @@ const Home = () => {
 			mediaRecorder.start();
 			return;
 		}
-		
+
 		toast.success("Stop recording");
 		mediaRecorder.stop();
 	};
