@@ -3,6 +3,9 @@ import HomeView from "./HomeView";
 import { toast } from "react-toastify";
 
 const Home = () => {
+	const [microphoneAllowed, setMicrophoneAllowed] = useState(false);
+	const [requestMicrophone, setRequestMicrophone] = useState(false);
+
 	const [isRecording, setRecording] = useState(false);
 	const [audioURL, setAudioURL] = useState("");
 	const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder | any>();
@@ -22,9 +25,12 @@ const Home = () => {
 				const stream =	await navigator.mediaDevices.getUserMedia({ audio: true });
 				const instanceMediaRecorder = new MediaRecorder(stream);
 
+				setMicrophoneAllowed(true);
 				instanceMediaRecorder.addEventListener("dataavailable",	dataavailableFn);
 				setMediaRecorder(instanceMediaRecorder);
+
 			} catch (error) {
+				setMicrophoneAllowed(false);
 				toast.error("Permission to use microphone denied",  {
 					toastId: "permission",
 				});
@@ -32,7 +38,9 @@ const Home = () => {
 			}
 		};
 		recordAudio();
-	}, []);
+	}, [requestMicrophone]);
+
+	const requestAccessMicrophone = () => setRequestMicrophone(prevState => !prevState);
 
 	const toggleRecording = async () => {		
 		setRecording(prevState => !prevState);
@@ -41,11 +49,12 @@ const Home = () => {
 			mediaRecorder.start();
 			return;
 		}
+		
 		toast.success("Stop recording");
 		mediaRecorder.stop();
 	};
 
-	return <HomeView {...{ isRecording, toggleRecording, audioURL }} />;
+	return <HomeView {...{ microphoneAllowed, isRecording, requestAccessMicrophone, toggleRecording, audioURL }} />;
 };
 
 export default Home;
