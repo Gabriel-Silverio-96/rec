@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HomeView from "./HomeView";
+import { toast } from "react-toastify";
 
 const Home = () => {
 	const [isRecording, setRecording] = useState(false);
@@ -14,7 +15,7 @@ const Home = () => {
 		const createAudioURL = window.URL.createObjectURL(blob);
 		setAudioURL(createAudioURL);
 	};
-
+	
 	useEffect(() => {
 		const recordAudio = async () => {
 			try {
@@ -30,12 +31,14 @@ const Home = () => {
 		recordAudio();
 	}, []);
 
-	const toggleRecording = async () => {
+	const toggleRecording = async () => {		
 		setRecording(prevState => !prevState);
 		if (!isRecording) {
+			toast.info("Start recording");
 			mediaRecorder.start();
 			return;
 		}
+		toast.success("Stop recording");
 		mediaRecorder.stop();
 	};
 
