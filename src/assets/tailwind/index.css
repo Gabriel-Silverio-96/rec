@@ -4,14 +4,14 @@
 
 @layer components {
     .btn-main {
-        @apply w-72 h-72 flex items-center justify-center m-auto rounded-full shadow-lg;
+        @apply w-72 h-72 flex items-center justify-center m-auto rounded-full duration-300;
     }
 
     .btn-recording {
-        @apply bg-red-recording-main shadow-recording;
+        @apply bg-red-recording-main shadow-recording hover:shadow-recording-hover;
     }
 
     .btn-stop-recording {
-        @apply bg-purple-stop-recording-main shadow-stop-recording;
+        @apply bg-purple-stop-recording-main shadow-stop-recording animate-pulse hover:shadow-stop-recording-hover;
     }
 }
