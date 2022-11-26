@@ -13,7 +13,9 @@ module.exports = {
      },  
      boxShadow: {
         "recording": "0px 0px 70px 40px #fc39394d",
+        "recording-hover": "0px 0px 50px 10px #fc39394d",        
         "stop-recording": "0px 0px 70px 40px #3d39fc47",
+        "stop-recording-hover": "0px 0px 50px 10px #3d39fc47",
      },
      spacing: {
       "75vh": "75vh",
