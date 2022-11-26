@@ -27,3 +27,8 @@ audio::-webkit-media-controls-timeline {
 audio::-webkit-media-controls-enclosure {
     border-radius: 1rem;
 }
+
+button:disabled {
+    filter: grayscale(1);
+    opacity: 0.5;
+}
