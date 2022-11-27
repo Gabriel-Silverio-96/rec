@@ -12,7 +12,7 @@ const Home = () => {
 	const dataavailableFn = (event: BlobEvent) => {
 		const { data } = event;
 		const BLOB_TYPE = "audio/ogg; codecs=opus";
-		const blob = new Blob([data], { type: BLOB_TYPE });
+		const blob = new Blob([ data ], { type: BLOB_TYPE });
 
 		const createAudioURL = window.URL.createObjectURL(blob);
 		setAudioURL(createAudioURL);
@@ -33,8 +33,11 @@ const Home = () => {
 			setMediaRecorder(instanceMediaRecorder);
 		} catch (error) {
 			setMicrophoneAllowed(false);
-			toast.error("Permission to use microphone denied", {
+
+			const THREE_SECOND = 3000;
+			toast.error("Permission to use microphone denied. Check browser permissions", {
 				toastId: "permission-microphone",
+				autoClose: THREE_SECOND
 			});
 			console.error(error);
 		}
