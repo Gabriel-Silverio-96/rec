@@ -21,6 +21,8 @@ const HomeView: React.FC<IHomeView> = props => {
 		<FaMicrophone color="white" size={90} />
 	);
 
+	const isRecordingAudioPointEventNone = isRecording ? "pointer-events-none" : "";
+
 	return (
 		<div className="home-container">
 			<button
@@ -36,7 +38,7 @@ const HomeView: React.FC<IHomeView> = props => {
 						Allow use of microphone
 				</button>
 			)}
-			<audio controls src={audioURL} />
+			<audio controls src={audioURL} className={isRecordingAudioPointEventNone} />
 		</div>
 	);
 };
