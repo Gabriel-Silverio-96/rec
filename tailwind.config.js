@@ -8,7 +8,6 @@ module.exports = {
     extend: {
       colors: {
         "recording-main": "#FC3939",
-        "red-recording-dark": "#D80000",
         "purple-stop-recording-main": "#3D39FC",
      },  
      boxShadow: {
