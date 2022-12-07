@@ -14,10 +14,10 @@
     }
 
     .btn-recording {
-        @apply bg-red-recording-main shadow-recording hover:shadow-recording-hover;
+        @apply bg-recording-main shadow-recording hover:shadow-recording-hover;
     }
 
     .btn-stop-recording {
-        @apply bg-purple-stop-recording-main shadow-stop-recording animate-pulse hover:shadow-stop-recording-hover;
+        @apply bg-stop-recording-main shadow-stop-recording animate-pulse hover:shadow-stop-recording-hover;
     }
 }

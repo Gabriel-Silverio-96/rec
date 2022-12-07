@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "red-recording-main": "#FC3939",
+        "recording-main": "#FC3939",
         "red-recording-dark": "#D80000",
         "purple-stop-recording-main": "#3D39FC",
      },  
