@@ -18,6 +18,6 @@
     }
 
     .btn-stop-recording {
-        @apply bg-purple-stop-recording-main shadow-stop-recording animate-pulse hover:shadow-stop-recording-hover;
+        @apply bg-stop-recording-main shadow-stop-recording animate-pulse hover:shadow-stop-recording-hover;
     }
 }
