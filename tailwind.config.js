@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "recording-main": "#FC3939",
-        "stop-recording-main": "#3D39FC",
+        "recording-main": "#3D39FC",
+        "stop-recording-main": "#FC3939",
      },  
      boxShadow: {
         "recording": "0px 0px 70px 40px #fc39394d",
