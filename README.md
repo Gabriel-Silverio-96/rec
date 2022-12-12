@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-    <img alt="Banner rec" src="https://user-images.githubusercontent.com/53228013/207181018-0933caa4-4a2c-4993-aa67-fa95314ece4c.gif" />
+    <img alt="Banner rec" src="https://user-images.githubusercontent.com/53228013/207184414-156e9ba8-4b89-43af-bf54-030ab6af22bb.png" />
 </p>
 
 🌐 App: [Test your microphone](rec-fawn.vercel.app)
