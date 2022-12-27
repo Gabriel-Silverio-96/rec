@@ -10,7 +10,7 @@
     <img alt="Banner rec" src="https://user-images.githubusercontent.com/53228013/207184414-156e9ba8-4b89-43af-bf54-030ab6af22bb.png" />
 </p>
 
-🌐 App: [Test your microphone](rec-fawn.vercel.app)
+🌐 App: [Test your microphone](https://rec-fawn.vercel.app/)
 
 Before your meeting or call, it is best to check your microphone ;)
 
