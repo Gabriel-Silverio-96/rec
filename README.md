@@ -30,11 +30,11 @@ Package manager yarn (not required)
 [Download Yarn](https://yarnpkg.com/getting-started/install)
 
 ```
-$ npm or $ yarn
+$ npm i or $ yarn
 ```
 
 Run project
 
 ```
-$ npm start or $ yarn start
+$ npm run start or $ yarn start
 ```
